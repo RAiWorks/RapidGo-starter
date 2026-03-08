@@ -1,0 +1,30 @@
+package seeders
+
+import (
+	fwseeders "github.com/RAiWorks/RapidGo/database/seeders"
+	"github.com/RAiWorks/RapidGo-starter/database/models"
+	"gorm.io/gorm"
+)
+
+func init() {
+	fwseeders.Register(&UserSeeder{})
+}
+
+// UserSeeder creates default user accounts.
+type UserSeeder struct{}
+
+func (s *UserSeeder) Name() string { return "UserSeeder" }
+
+func (s *UserSeeder) Seed(db *gorm.DB) error {
+	users := []models.User{
+		{Name: "Admin", Email: "admin@example.com", Password: "password123", Role: "admin"},
+		{Name: "User", Email: "user@example.com", Password: "password123", Role: "user"},
+	}
+	for _, u := range users {
+		// TODO: Hash password when Feature #19/#22 ships
+		if err := db.FirstOrCreate(&u, models.User{Email: u.Email}).Error; err != nil {
+			return err
+		}
+	}
+	return nil
+}

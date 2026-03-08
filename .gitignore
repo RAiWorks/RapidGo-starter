@@ -1,0 +1,28 @@
+# Binaries
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+*.test
+*.out
+bin/
+
+# Go
+vendor/
+
+# Environment
+.env
+
+# Storage
+storage/logs/*
+storage/cache/*
+storage/sessions/*
+storage/uploads/*
+!storage/**/.gitkeep
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
