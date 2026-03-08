@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"log/slog"
 
-	"github.com/RAiWorks/RapidGo/core/container"
-	"github.com/RAiWorks/RapidGo/core/router"
+	"github.com/RAiWorks/RapidGo/v2/core/container"
+	"github.com/RAiWorks/RapidGo/v2/core/router"
 	"github.com/gin-gonic/gin"
 	"github.com/spf13/cobra"
 )

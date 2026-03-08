@@ -4,12 +4,12 @@ import (
 	"os"
 	"path/filepath"
 
-	"github.com/RAiWorks/RapidGo/core/config"
-	"github.com/RAiWorks/RapidGo/core/container"
-	"github.com/RAiWorks/RapidGo/core/health"
-	"github.com/RAiWorks/RapidGo/core/metrics"
-	"github.com/RAiWorks/RapidGo/core/router"
-	"github.com/RAiWorks/RapidGo/core/service"
+	"github.com/RAiWorks/RapidGo/v2/core/config"
+	"github.com/RAiWorks/RapidGo/v2/core/container"
+	"github.com/RAiWorks/RapidGo/v2/core/health"
+	"github.com/RAiWorks/RapidGo/v2/core/metrics"
+	"github.com/RAiWorks/RapidGo/v2/core/router"
+	"github.com/RAiWorks/RapidGo/v2/core/service"
 	"github.com/RAiWorks/RapidGo-starter/routes"
 	"gorm.io/gorm"
 )

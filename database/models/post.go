@@ -1,6 +1,6 @@
 package models
 
-import fwmodels "github.com/RAiWorks/RapidGo/database/models"
+import fwmodels "github.com/RAiWorks/RapidGo/v2/database/models"
 
 // Post represents a content entry authored by a user.
 type Post struct {

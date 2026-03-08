@@ -3,7 +3,7 @@ package migrations
 import (
 	"time"
 
-	fwmigrations "github.com/RAiWorks/RapidGo/database/migrations"
+	fwmigrations "github.com/RAiWorks/RapidGo/v2/database/migrations"
 	"gorm.io/gorm"
 )
 

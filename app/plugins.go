@@ -1,7 +1,7 @@
 package app
 
 import (
-	"github.com/RAiWorks/RapidGo/core/plugin"
+	"github.com/RAiWorks/RapidGo/v2/core/plugin"
 	exampleplugin "github.com/RAiWorks/RapidGo-starter/plugins/example"
 )
 

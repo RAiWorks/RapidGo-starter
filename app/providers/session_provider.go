@@ -1,8 +1,8 @@
 package providers
 
 import (
-	"github.com/RAiWorks/RapidGo/core/container"
-	"github.com/RAiWorks/RapidGo/core/session"
+	"github.com/RAiWorks/RapidGo/v2/core/container"
+	"github.com/RAiWorks/RapidGo/v2/core/session"
 	"gorm.io/gorm"
 )
 

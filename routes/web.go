@@ -1,7 +1,7 @@
 package routes
 
 import (
-	"github.com/RAiWorks/RapidGo/core/router"
+	"github.com/RAiWorks/RapidGo/v2/core/router"
 	"github.com/RAiWorks/RapidGo-starter/http/controllers"
 )
 

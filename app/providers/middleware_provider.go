@@ -1,9 +1,9 @@
 package providers
 
 import (
-	"github.com/RAiWorks/RapidGo/core/container"
-	"github.com/RAiWorks/RapidGo/core/middleware"
-	"github.com/RAiWorks/RapidGo/core/service"
+	"github.com/RAiWorks/RapidGo/v2/core/container"
+	"github.com/RAiWorks/RapidGo/v2/core/middleware"
+	"github.com/RAiWorks/RapidGo/v2/core/service"
 )
 
 // MiddlewareProvider registers built-in middleware aliases and groups.
