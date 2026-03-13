@@ -5,7 +5,7 @@ import (
 	"encoding/json"
 	"log/slog"
 
-	"github.com/RAiWorks/RapidGo/v2/core/queue"
+	"github.com/raiworks/rapidgo/v2/core/queue"
 )
 
 // RegisterJobs registers all application job handlers.

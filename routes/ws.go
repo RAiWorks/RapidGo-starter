@@ -1,6 +1,6 @@
 package routes
 
-import "github.com/RAiWorks/RapidGo/v2/core/router"
+import "github.com/raiworks/rapidgo/v2/core/router"
 
 // RegisterWS defines WebSocket routes.
 // Currently a placeholder ΓÇö WebSocket routes will be added as the application grows.

@@ -1,8 +1,8 @@
 package app
 
 import (
-	"github.com/RAiWorks/RapidGo/v2/core/plugin"
-	exampleplugin "github.com/RAiWorks/RapidGo-starter/plugins/example"
+	"github.com/raiworks/rapidgo/v2/core/plugin"
+	exampleplugin "github.com/raiworks/rapidgo-starter/plugins/example"
 )
 
 // RegisterPlugins registers all application plugins with the manager.

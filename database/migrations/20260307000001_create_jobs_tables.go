@@ -1,7 +1,7 @@
 package migrations
 
 import (
-	fwmigrations "github.com/RAiWorks/RapidGo/v2/database/migrations"
+	fwmigrations "github.com/raiworks/rapidgo/v2/database/migrations"
 	"gorm.io/gorm"
 )
 

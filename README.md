@@ -1,20 +1,20 @@
 # RapidGo Starter
 
-A scaffold project for the [RapidGo](https://github.com/RAiWorks/RapidGo) framework (v2.1.0).
+A scaffold project for the [RapidGo](https://github.com/raiworks/rapidgo) framework (v2.1.0).
 
 ## Getting Started
 
 ### Option 1: CLI (recommended)
 
 ```bash
-go install github.com/RAiWorks/RapidGo/cmd/rapidgo@latest
+go install github.com/raiworks/rapidgo/cmd/rapidgo@latest
 rapidgo new myapp
 ```
 
 ### Option 2: Clone
 
 ```bash
-git clone https://github.com/RAiWorks/RapidGo-starter myapp
+git clone https://github.com/raiworks/rapidgo-starter myapp
 cd myapp
 # Update module name in go.mod and all .go files
 go mod tidy

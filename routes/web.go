@@ -1,8 +1,8 @@
 package routes
 
 import (
-	"github.com/RAiWorks/RapidGo/v2/core/router"
-	"github.com/RAiWorks/RapidGo-starter/http/controllers"
+	"github.com/raiworks/rapidgo/v2/core/router"
+	"github.com/raiworks/rapidgo-starter/http/controllers"
 )
 
 // RegisterWeb defines web (HTML) routes.

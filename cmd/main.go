@@ -1,17 +1,17 @@
 package main
 
 import (
-	"github.com/RAiWorks/RapidGo-starter/app/jobs"
-	"github.com/RAiWorks/RapidGo-starter/app/providers"
-	"github.com/RAiWorks/RapidGo-starter/app/schedule"
-	"github.com/RAiWorks/RapidGo/v2/core/app"
-	"github.com/RAiWorks/RapidGo/v2/core/cli"
-	"github.com/RAiWorks/RapidGo/v2/core/container"
-	"github.com/RAiWorks/RapidGo/v2/core/router"
-	"github.com/RAiWorks/RapidGo/v2/core/service"
-	"github.com/RAiWorks/RapidGo-starter/database/models"
-	fwseeders "github.com/RAiWorks/RapidGo/v2/database/seeders"
-	"github.com/RAiWorks/RapidGo-starter/routes"
+	"github.com/raiworks/rapidgo-starter/app/jobs"
+	"github.com/raiworks/rapidgo-starter/app/providers"
+	"github.com/raiworks/rapidgo-starter/app/schedule"
+	"github.com/raiworks/rapidgo/v2/core/app"
+	"github.com/raiworks/rapidgo/v2/core/cli"
+	"github.com/raiworks/rapidgo/v2/core/container"
+	"github.com/raiworks/rapidgo/v2/core/router"
+	"github.com/raiworks/rapidgo/v2/core/service"
+	"github.com/raiworks/rapidgo-starter/database/models"
+	fwseeders "github.com/raiworks/rapidgo/v2/database/seeders"
+	"github.com/raiworks/rapidgo-starter/routes"
 	"gorm.io/gorm"
 )
 

@@ -3,7 +3,7 @@ package services
 import (
 	"errors"
 
-	"github.com/RAiWorks/RapidGo-starter/database/models"
+	"github.com/raiworks/rapidgo-starter/database/models"
 
 	"gorm.io/gorm"
 )

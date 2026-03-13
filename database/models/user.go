@@ -4,8 +4,8 @@ import (
 	"strings"
 	"time"
 
-	fwmodels "github.com/RAiWorks/RapidGo/v2/database/models"
-	"github.com/RAiWorks/RapidGo-starter/app/helpers"
+	fwmodels "github.com/raiworks/rapidgo/v2/database/models"
+	"github.com/raiworks/rapidgo-starter/app/helpers"
 	"gorm.io/gorm"
 )
 

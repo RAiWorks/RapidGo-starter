@@ -1,6 +1,6 @@
 package notifications
 
-import "github.com/RAiWorks/RapidGo/v2/core/notification"
+import "github.com/raiworks/rapidgo/v2/core/notification"
 
 // WelcomeNotification is sent when a new user registers.
 type WelcomeNotification struct {

@@ -1,8 +1,8 @@
 package providers
 
 import (
-	"github.com/RAiWorks/RapidGo/v2/core/container"
-	"github.com/RAiWorks/RapidGo/v2/core/notification"
+	"github.com/raiworks/rapidgo/v2/core/container"
+	"github.com/raiworks/rapidgo/v2/core/notification"
 	"gorm.io/gorm"
 )
 

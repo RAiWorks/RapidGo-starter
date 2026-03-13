@@ -3,7 +3,7 @@ package services
 import (
 	"testing"
 
-	"github.com/RAiWorks/RapidGo-starter/database/models"
+	"github.com/raiworks/rapidgo-starter/database/models"
 
 	"github.com/glebarez/sqlite"
 	"gorm.io/gorm"

@@ -1,8 +1,8 @@
 package seeders
 
 import (
-	fwseeders "github.com/RAiWorks/RapidGo/v2/database/seeders"
-	"github.com/RAiWorks/RapidGo-starter/database/models"
+	fwseeders "github.com/raiworks/rapidgo/v2/database/seeders"
+	"github.com/raiworks/rapidgo-starter/database/models"
 	"gorm.io/gorm"
 )
 
