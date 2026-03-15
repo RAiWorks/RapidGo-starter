@@ -1,6 +1,8 @@
 package migrations
 
 import (
+	"time"
+
 	fwmigrations "github.com/raiworks/rapidgo/v2/database/migrations"
 	"gorm.io/gorm"
 )
@@ -9,39 +11,37 @@ func init() {
 	fwmigrations.Register(fwmigrations.Migration{
 		Version: "20260307000001_create_jobs_tables",
 		Up: func(db *gorm.DB) error {
-			// Create jobs table.
-			if err := db.Exec(`CREATE TABLE IF NOT EXISTS jobs (
-				id          BIGINT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-				queue       VARCHAR(255) NOT NULL,
-				type        VARCHAR(255) NOT NULL,
-				payload     TEXT NOT NULL,
-				attempts    INT UNSIGNED NOT NULL DEFAULT 0,
-				max_attempts INT UNSIGNED NOT NULL DEFAULT 3,
-				available_at DATETIME NOT NULL,
-				reserved_at  DATETIME NULL,
-				created_at   DATETIME NOT NULL,
-				INDEX idx_jobs_queue (queue),
-				INDEX idx_jobs_available_at (available_at),
-				INDEX idx_jobs_reserved_at (reserved_at)
-			)`).Error; err != nil {
-				return err
+			type Job struct {
+				ID          uint64     `gorm:"primaryKey;autoIncrement"`
+				Queue       string     `gorm:"size:255;not null;index:idx_jobs_queue"`
+				Type        string     `gorm:"size:255;not null"`
+				Payload     string     `gorm:"type:text;not null"`
+				Attempts    uint       `gorm:"not null;default:0"`
+				MaxAttempts uint       `gorm:"not null;default:3"`
+				AvailableAt time.Time  `gorm:"not null;index:idx_jobs_available_at"`
+				ReservedAt  *time.Time `gorm:"index:idx_jobs_reserved_at"`
+				CreatedAt   time.Time  `gorm:"not null"`
 			}
 
-			// Create failed_jobs table.
-			return db.Exec(`CREATE TABLE IF NOT EXISTS failed_jobs (
-				id        BIGINT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-				queue     VARCHAR(255) NOT NULL,
-				type      VARCHAR(255) NOT NULL,
-				payload   TEXT NOT NULL,
-				error     TEXT NOT NULL,
-				failed_at DATETIME NOT NULL
-			)`).Error
-		},
-		Down: func(db *gorm.DB) error {
-			if err := db.Exec(`DROP TABLE IF EXISTS failed_jobs`).Error; err != nil {
+			type FailedJob struct {
+				ID       uint64    `gorm:"primaryKey;autoIncrement"`
+				Queue    string    `gorm:"size:255;not null"`
+				Type     string    `gorm:"size:255;not null"`
+				Payload  string    `gorm:"type:text;not null"`
+				Error    string    `gorm:"type:text;not null"`
+				FailedAt time.Time `gorm:"not null"`
+			}
+
+			if err := db.AutoMigrate(&Job{}); err != nil {
 				return err
 			}
-			return db.Exec(`DROP TABLE IF EXISTS jobs`).Error
+			return db.Table("failed_jobs").AutoMigrate(&FailedJob{})
+		},
+		Down: func(db *gorm.DB) error {
+			if err := db.Migrator().DropTable("failed_jobs"); err != nil {
+				return err
+			}
+			return db.Migrator().DropTable("jobs")
 		},
 	})
 }
